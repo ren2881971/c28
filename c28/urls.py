@@ -6,5 +6,8 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 # admin.autodiscover()
 
 urlpatterns = patterns('c28.views',
-   url(r'^$','index',name='index'),
+   url(r'^$','index', name='index'),
+   url(r'account/', include('account.urls')),
+   url(r'forum/', include('forum.urls')),
 )
+urlpatterns += staticfiles_urlpatterns()
