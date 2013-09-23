@@ -7,7 +7,7 @@
     <form action = "/account/signin/" method = "post">
         {% csrf_token %}
             登录邮箱：<input type = "email" id = "email" name = "email"/>
-            昵称：<input type = "text" id = "name" name = "name"/>
+            昵称：<input type = "text" id = "nickname" name = "nickname"/>
             密码: <input type = "password" id = "password" name = "password"/>
             生日：<input type = "date" id = "birthday" name = "birthday"/>
         <button type = "submit">Submit</button>

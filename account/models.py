@@ -1,12 +1,11 @@
+#coding:utf-8
 from django.db import models
+from django.contrib.auth.models import User
 class Account(models.Model):
-    email = models.EmailField(max_length=50)
-    name = models.CharField(max_length=50)
-    password = models.CharField(max_length=32)
-    status = models.IntegerField(max_length=2, default=0)
+    user = models.OneToOneField(User,related_name='user_profile',verbose_name=u'用户')
+    nickname = models.CharField(max_length=50)
     photo = models.CharField(max_length=500)
     birthday = models.DateTimeField(blank=True)
-    date = models.DateTimeField(auto_now_add=True)
     def __unicode__(self):
         return self.email
     class Meta:
