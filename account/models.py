@@ -5,9 +5,8 @@ class Account(models.Model):
     password = models.CharField(max_length=32)
     status = models.IntegerField(max_length=2, default=0)
     photo = models.CharField(max_length=500)
-    birthday = models.DateTimeField()
+    birthday = models.DateTimeField(blank=True)
     date = models.DateTimeField(auto_now_add=True)
-
     def __unicode__(self):
         return self.email
     class Meta:
