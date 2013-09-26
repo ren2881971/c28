@@ -1,0 +1,25 @@
+2013-09-26 13:22:42,640 [Thread-3:1360] [django.request:212] [ERROR]- Internal Server Error: /account/signin/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "F:\PythonWork\c28\account\views.py", line 14, in signin
+    value = form.cleaned_data
+AttributeError: 'SigninForm' object has no attribute 'cleaned_data'
+2013-09-26 13:23:32,171 [Thread-1:3236] [django.request:212] [ERROR]- Internal Server Error: /account/signin/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "F:\PythonWork\c28\account\views.py", line 14, in signin
+    value = form.clean()
+  File "F:\PythonWork\c28\account\form.py", line 23, in clean
+    if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
+AttributeError: 'SigninForm' object has no attribute 'cleaned_data'
+2013-09-26 13:23:42,155 [Thread-5:4644] [django.request:212] [ERROR]- Internal Server Error: /account/signin/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "F:\PythonWork\c28\account\views.py", line 14, in signin
+    value = form.clean()
+  File "F:\PythonWork\c28\account\form.py", line 23, in clean
+    if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
+AttributeError: 'SigninForm' object has no attribute 'cleaned_data'
