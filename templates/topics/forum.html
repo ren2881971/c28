@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<ul>
+{% for topic in topics %}
+<li><a href="/topic/id={{topic.id}}">{{topic.subject}}</a> <a href="/topic/id={{topic.id}}">删除</a></li>
+{% endfor %}
+<a href="/topic/new">新建话题</a>
+</ul>
+</html>

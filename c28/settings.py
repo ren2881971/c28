@@ -13,10 +13,10 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'mysql',                      # Or path to database file if using sqlite3.
+        'NAME': 'c28',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': 'frank',
-        'PASSWORD': 'frank',
+        'USER': 'root',
+        'PASSWORD': 'cc123',
         'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
@@ -116,6 +116,9 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     PROJECT_PATH+'/templates/',
+    PROJECT_PATH+'/templates/account',
+    PROJECT_PATH+'/templates/index',
+    PROJECT_PATH+'/templates/topics',
 )
 
 INSTALLED_APPS = (
@@ -126,9 +129,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account',
-    'forum',
+    'topics',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
