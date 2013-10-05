@@ -655,3 +655,1159 @@ Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 433, in __str__
     return force_text(self).encode('utf-8')
 AttributeError: 'long' object has no attribute 'encode'
+2013-10-03 12:41:43,799 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 8, in forum
+    return render(request, template_name, forum_topics)
+NameError: global name 'render' is not defined
+2013-10-03 12:42:12,431 [Thread-3:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=1
+2013-10-03 12:44:49,918 [Thread-5:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=1
+2013-10-03 15:47:32,619 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 4, in <module>
+    from forms import NewTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 4, in <module>
+    class TopicForm(forms.Form):
+  File "/home/cc/djcode/c28/topics/forms.py", line 6, in TopicForm
+    content = forms.TextField(label = u'内容', widget = forms.Textarea(attrs={'cols':'95','rows':'14'}))
+AttributeError: 'module' object has no attribute 'TextField'
+2013-10-03 15:47:49,796 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 4, in <module>
+    from forms import NewTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 4, in <module>
+    class TopicForm(forms.Form):
+  File "/home/cc/djcode/c28/topics/forms.py", line 8, in TopicForm
+    class Meta:
+  File "/home/cc/djcode/c28/topics/forms.py", line 9, in Meta
+    model = POST
+NameError: name 'POST' is not defined
+2013-10-03 15:48:25,995 [Thread-6:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 22, in topic_new
+    return render_to_response(template_name, {'form': form})
+UnboundLocalError: local variable 'form' referenced before assignment
+2013-10-03 15:48:32,104 [Thread-7:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 22, in topic_new
+    return render_to_response(template_name, {'form': form})
+UnboundLocalError: local variable 'form' referenced before assignment
+2013-10-03 15:50:32,851 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 22, in topic_new
+    return render_to_response(template_name, {'form':form})
+UnboundLocalError: local variable 'form' referenced before assignment
+2013-10-03 15:52:09,069 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 22, in topic_new
+    return render_to_response('topic_new.html', {'form':form})
+UnboundLocalError: local variable 'form' referenced before assignment
+2013-10-03 15:53:46,708 [Thread-1:-1240466624] [django.request:146] [WARNING]- Not Found: /topic
+2013-10-03 15:54:02,158 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /form
+2013-10-03 15:54:07,136 [Thread-5:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 22, in topic_new
+    return render_to_response('topic_new.html', {'form':form})
+UnboundLocalError: local variable 'form' referenced before assignment
+2013-10-03 15:55:49,065 [Thread-3:-1239418048] [django.request:194] [WARNING]- Forbidden (CSRF token missing or incorrect.): /topic/new/
+2013-10-03 15:57:51,267 [Thread-5:-1239418048] [django.request:194] [WARNING]- Forbidden (CSRF token missing or incorrect.): /topic/new/
+2013-10-03 15:58:13,133 [Thread-3:-1240466624] [django.request:194] [WARNING]- Forbidden (CSRF token missing or incorrect.): /topic/new/
+2013-10-03 16:00:15,098 [Thread-5:-1240466624] [django.request:194] [WARNING]- Forbidden (CSRF token missing or incorrect.): /topic/new/
+2013-10-03 16:07:50,402 [Thread-3:-1240466624] [django.request:194] [WARNING]- Forbidden (CSRF token missing or incorrect.): /topic/new/
+2013-10-03 16:09:41,225 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 13, in save
+    topic = self.name
+AttributeError: 'NewTopicForm' object has no attribute 'name'
+2013-10-03 16:14:47,771 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 13, in save
+    topic = self.name
+AttributeError: 'NewTopicForm' object has no attribute 'name'
+2013-10-03 16:19:33,630 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 13, in save
+    post = Post(name = self.cleaned_date['name'], content = self.cleaned_date['content'])
+NameError: global name 'Post' is not defined
+2013-10-03 16:20:45,451 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 14, in save
+    post = Topic(name = self.cleaned_date['name'], content = self.cleaned_date['content'])
+AttributeError: 'NewTopicForm' object has no attribute 'cleaned_date'
+2013-10-03 16:22:11,550 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 127, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'account_id' cannot be null")
+2013-10-03 16:23:46,512 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 127, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'account_id' cannot be null")
+2013-10-03 16:25:59,428 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 127, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'account_id' cannot be null")
+2013-10-03 16:27:39,239 [Thread-1:-1240466624] [django.request:146] [WARNING]- Not Found: /topic/
+2013-10-03 16:27:51,510 [Thread-5:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 127, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1048, "Column 'account_id' cannot be null")
+2013-10-03 16:28:49,148 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 122, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`c28`.`topics_topic`, CONSTRAINT `account_id_refs_id_3b2fd9de` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))')
+2013-10-03 16:29:35,329 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 122, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`c28`.`topics_topic`, CONSTRAINT `account_id_refs_id_3b2fd9de` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))')
+2013-10-03 16:29:57,067 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 14, in save
+    post = Topic(name = self.cleaned_data['name'], content = self.cleaned_data['content'], account = 1)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 403, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 405, in __set__
+    self.field.name, self.field.rel.to._meta.object_name))
+ValueError: Cannot assign "1": "Topic.account" must be a "Account" instance.
+2013-10-03 16:30:15,563 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 14, in save
+    post = Topic(name = self.cleaned_data['name'], content = self.cleaned_data['content'], account = '1')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 403, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 405, in __set__
+    self.field.name, self.field.rel.to._meta.object_name))
+ValueError: Cannot assign "'1'": "Topic.account" must be a "Account" instance.
+2013-10-03 16:30:25,407 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 14, in save
+    post = Topic(name = self.cleaned_data['name'], content = self.cleaned_data['content'], account = 'cc')
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 403, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/fields/related.py", line 405, in __set__
+    self.field.name, self.field.rel.to._meta.object_name))
+ValueError: Cannot assign "'cc'": "Topic.account" must be a "Account" instance.
+2013-10-03 16:31:00,703 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 122, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`c28`.`topics_topic`, CONSTRAINT `account_id_refs_id_3b2fd9de` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))')
+2013-10-03 16:31:30,767 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 122, in execute
+    six.reraise(utils.IntegrityError, utils.IntegrityError(*tuple(e.args)), sys.exc_info()[2])
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 174, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+IntegrityError: (1452, 'Cannot add or update a child row: a foreign key constraint fails (`c28`.`topics_topic`, CONSTRAINT `account_id_refs_id_3b2fd9de` FOREIGN KEY (`account_id`) REFERENCES `account` (`id`))')
+2013-10-03 16:41:54,882 [Thread-4:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 19, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 176, in execute
+    if not self._defer_warnings: self._warning_check()
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 92, in _warning_check
+    warn(w[-1], self.Warning, 3)
+Warning: Incorrect string value: '\xE4\xBA\x8B\xE5\xAE\x9E...' for column 'name' at row 1
+2013-10-03 16:42:38,066 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 20, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 176, in execute
+    if not self._defer_warnings: self._warning_check()
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 92, in _warning_check
+    warn(w[-1], self.Warning, 3)
+Warning: Incorrect string value: '\xE8\xAF\x95\xE8\xAF\x95' for column 'name' at row 1
+2013-10-03 16:42:46,111 [Thread-4:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 21, in topic_new
+    return HttpResponseRedirect('/topic/new/success/')
+NameError: global name 'HttpResponseRedirect' is not defined
+2013-10-04 02:13:17,505 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /favicon.ico
+2013-10-04 02:13:17,568 [Thread-4:-1240466624] [django.request:146] [WARNING]- Not Found: /favicon.ico
+2013-10-04 02:16:12,189 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/success/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 29, in topic_new_success
+    return HttpResponse("<a href="/forum/">OK!</a>")
+TypeError: unsupported operand type(s) for /: 'str' and 'function'
+2013-10-04 02:17:22,033 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/success/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 29
+    return HttpResponse(<a href="/forum/">OK!</a>)
+                        ^
+SyntaxError: invalid syntax
+2013-10-04 02:18:42,936 [Thread-8:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/success/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 29, in topic_new_success
+    html = "<html><a href="/forum/">OK!</a></html>"
+TypeError: unsupported operand type(s) for /: 'str' and 'function'
+2013-10-04 02:20:07,617 [Thread-4:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=9
+2013-10-04 02:21:05,142 [Thread-5:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=9
+2013-10-04 02:21:10,654 [Thread-6:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=9
+2013-10-04 02:21:13,349 [Thread-7:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=9
+2013-10-04 02:23:53,415 [Thread-11:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/delete/id=9
+2013-10-04 02:27:35,298 [Thread-12:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/delete/id=9
+2013-10-04 02:27:37,522 [Thread-13:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/id=9
+2013-10-04 02:37:20,124 [Thread-12:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 21, in topic_new
+    post = form.save()
+  File "/home/cc/djcode/c28/topics/forms.py", line 15, in save
+    post.save()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 546, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/base.py", line 650, in save_base
+    result = manager._insert([self], fields=fields, return_id=update_pk, using=using, raw=raw)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 215, in _insert
+    return insert_query(self.model, objs, fields, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 1675, in insert_query
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 937, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/util.py", line 41, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/mysql/base.py", line 120, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 176, in execute
+    if not self._defer_warnings: self._warning_check()
+  File "/usr/lib/python2.7/dist-packages/MySQLdb/cursors.py", line 92, in _warning_check
+    warn(w[-1], self.Warning, 3)
+Warning: Incorrect string value: '\xE9\x97\xAE\xE6\x97\xA0...' for column 'name' at row 1
+2013-10-04 02:45:56,158 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 12, in forum
+    return render(request, template_name, forum_topics)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 148, in render
+    len_values = len(values)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 106, in __len__
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 317, in iterator
+    for row in compiler.results_iter():
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 775, in results_iter
+    for rows in self.execute_sql(MULTI):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 830, in execute_sql
+    sql, params = self.as_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 75, in as_sql
+    ordering, ordering_group_by = self.get_ordering()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 394, in get_ordering
+    self.query.model._meta, default_order=asc):
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 420, in find_ordering_name
+    field, col, alias, joins, opts = self._setup_joins(pieces, opts, alias)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 453, in _setup_joins
+    opts, alias, False)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/query.py", line 1337, in setup_joins
+    "Choices are: %s" % (name, ", ".join(names)))
+FieldError: Cannot resolve keyword 'date' into field. Choices are: content, create_time, id, name, topic_reply
+2013-10-04 02:59:18,720 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /topic/id=2
+2013-10-04 03:00:29,025 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/id=2
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "/usr/local/lib/python2.7/dist-packages/django/middleware/common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/c28/urls.py", line 20
+    url(r'topic/new/$', 'topic_new'),
+      ^
+SyntaxError: invalid syntax
+2013-10-04 03:00:37,359 [Thread-4:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/id=2/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 17, in topic
+    post['主题'] = topic.name
+AttributeError: 'QuerySet' object has no attribute 'name'
+2013-10-04 03:03:53,088 [Thread-1:-1239418048] [django.request:146] [WARNING]- Not Found: /topic/
+2013-10-04 03:05:14,272 [Thread-26:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/id=3/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 16, in topic
+    topic = Topic.objects.get(id = id)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/manager.py", line 143, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 404, in get
+    self.model._meta.object_name)
+DoesNotExist: Topic matching query does not exist.
+2013-10-04 03:07:27,896 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/id=4/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 15, in topic
+    post['posts'] = Topic.objects.get(id = id)
+NameError: global name 'post' is not defined
+2013-10-04 03:07:37,642 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/id=4/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 17, in topic
+    return render(request, 'topic.html', post)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 147, in render
+    values = list(values)
+TypeError: 'Topic' object is not iterable
+2013-10-05 14:34:15,320 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /favicon.ico
+2013-10-05 14:34:15,350 [Thread-4:-1250952384] [django.request:146] [WARNING]- Not Found: /favicon.ico
+2013-10-05 14:34:33,519 [Thread-15:-1250952384] [django.request:212] [ERROR]- Internal Server Error: /topic/id=7/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 17, in topic
+    return render(request, 'topic.html', post)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/debug.py", line 74, in render_node
+    return node.render(context)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/defaulttags.py", line 147, in render
+    values = list(values)
+TypeError: 'Topic' object is not iterable
+2013-10-05 14:40:54,470 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /post/reply/tid=&pid=
+2013-10-05 14:43:30,400 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/id=7/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 17, in topic
+    return render(request, 'topic.html', post)
+  File "/usr/local/lib/python2.7/dist-packages/django/shortcuts/__init__.py", line 53, in render
+    return HttpResponse(loader.render_to_string(*args, **kwargs),
+  File "/usr/local/lib/python2.7/dist-packages/django/template/loader.py", line 175, in render_to_string
+    context_instance.update(dictionary)
+  File "/usr/local/lib/python2.7/dist-packages/django/template/context.py", line 106, in update
+    raise TypeError('other_dict must be a mapping (dictionary-like) object.')
+TypeError: other_dict must be a mapping (dictionary-like) object.
+2013-10-05 14:45:55,290 [Thread-5:-1239418048] [django.request:146] [WARNING]- Not Found: /post/delete/tid=7&pid=
+2013-10-05 14:48:52,326 [Thread-7:-1239418048] [django.request:146] [WARNING]- Not Found: /post/delete/tid=7
+2013-10-05 14:49:02,299 [Thread-9:-1239418048] [django.request:146] [WARNING]- Not Found: /post/delete/id=7
+2013-10-05 15:23:11,915 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/c28/urls.py", line 23
+    url(r'topic/edit/id=(?P<id>\d+')/$', 'topic_edit'),
+                                     ^
+SyntaxError: invalid syntax
+2013-10-05 15:23:43,163 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 34
+    def topic_edit(request. id):
+                          ^
+SyntaxError: invalid syntax
+2013-10-05 15:24:04,005 [Thread-4:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18
+    class EditTopicForm(TopicForm)
+                                 ^
+SyntaxError: invalid syntax
+2013-10-05 15:24:05,230 [Thread-5:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18
+    class EditTopicForm(TopicForm)
+                                 ^
+SyntaxError: invalid syntax
+2013-10-05 15:46:03,207 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/c28/urls.py", line 23
+    url(r'topic/edit/id=(?P<id>\d+')/$', 'topic_edit'),
+                                     ^
+SyntaxError: invalid syntax
+2013-10-05 15:47:57,914 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/c28/urls.py", line 23
+    url(r'topic/edit/id=(?P<id>\d+')/$', 'topic_edit'),
+                                     ^
+SyntaxError: invalid syntax
+2013-10-05 15:48:29,379 [Thread-4:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 34
+    def topic_edit(request. id):
+                          ^
+SyntaxError: invalid syntax
+2013-10-05 15:48:47,350 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/c28/urls.py", line 23
+    url(r'topic/edit/id=(?P<id>\d+')/$', 'topic_edit'),
+                                     ^
+SyntaxError: invalid syntax
+2013-10-05 15:48:56,198 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18
+    class EditTopicForm(TopicForm)
+                                 ^
+SyntaxError: invalid syntax
+2013-10-05 15:49:41,536 [Thread-7:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 41, in topic_edit
+    form = EditTopicForm()
+TypeError: __init__() takes exactly 2 arguments (1 given)
+2013-10-05 15:50:09,977 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=1/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18, in <module>
+    class EditTopicForm(TopicForm, id):
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 66, in __new__
+    cls).__new__(cls, name, bases, attrs)
+TypeError: Error when calling the metaclass bases
+    metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
+2013-10-05 15:50:46,399 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18, in <module>
+    class EditTopicForm(TopicForm, id):
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 66, in __new__
+    cls).__new__(cls, name, bases, attrs)
+TypeError: Error when calling the metaclass bases
+    metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
+2013-10-05 16:06:11,765 [Thread-3:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 36
+    form = EditTopicForm(id = id, request.POST)
+SyntaxError: non-keyword arg after keyword arg
+2013-10-05 16:06:53,398 [Thread-4:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /forum/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 20
+    super(EditTopicForm, self).__init__(*args, **kwargs):
+                                                        ^
+SyntaxError: invalid syntax
+2013-10-05 16:10:02,797 [Thread-8:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 41, in topic_edit
+    form = EditTopicForm()
+TypeError: __init__() takes at least 2 arguments (1 given)
+2013-10-05 16:10:59,478 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 41, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    super(EditTopicForm, self).__init__(*args, **kwargs)
+  File "/home/cc/djcode/c28/topics/forms.py", line 10, in __init__
+    super(Topic, self).__init__(*args, **kwargs)
+TypeError: super(type, obj): obj must be an instance or subtype of type
+2013-10-05 16:11:36,425 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 41, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 21, in __init__
+    topic = Topicl.objects.get(id = id)
+NameError: global name 'Topicl' is not defined
+2013-10-05 16:19:50,164 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 35, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    self.name = topic.name
+NameError: global name 'topic' is not defined
+2013-10-05 16:20:57,261 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 35, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    self.name = aaaa
+NameError: global name 'aaaa' is not defined
+2013-10-05 16:21:36,230 [Thread-3:-1240466624] [django.request:146] [WARNING]- Not Found: /form
+2013-10-05 16:24:55,459 [Thread-1:-1239471296] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 35, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    self.name = kwargs.pop('aaaa')
+KeyError: 'aaaa'
+2013-10-05 16:25:26,442 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 35, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    self.name = kwargs.pop(name, 'aaaa')
+NameError: global name 'name' is not defined
+2013-10-05 16:25:27,787 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 35, in topic_edit
+    form = EditTopicForm(id = id, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 23, in __init__
+    self.name = kwargs.pop(name, 'aaaa')
+NameError: global name 'name' is not defined
+2013-10-05 16:25:54,409 [Thread-1:-1239471296] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 20
+    super(EditTopicForm, self).__init__(*args, **kwargs):
+                                                        ^
+SyntaxError: invalid syntax
+2013-10-05 16:33:09,666 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=9/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 35
+    form = EditTopicForm({'name' = 'aaaaa', 'content' = 'bbbbbb'})
+                                 ^
+SyntaxError: invalid syntax
+2013-10-05 16:43:41,773 [Thread-7:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=13/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 39, in topic_edit
+    post = form.save(id = id)
+TypeError: save() got an unexpected keyword argument 'id'
+2013-10-05 16:53:23,074 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=13/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 7, in <module>
+    from forms import NewTopicForm, EditTopicForm
+  File "/home/cc/djcode/c28/topics/forms.py", line 18, in <module>
+    class EditTopicForm(TopicForm, id):
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/forms.py", line 66, in __new__
+    cls).__new__(cls, name, bases, attrs)
+TypeError: Error when calling the metaclass bases
+    metaclass conflict: the metaclass of a derived class must be a (non-strict) subclass of the metaclasses of all its bases
+2013-10-05 17:09:18,405 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=13/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 42, in topic_edit
+    form = NewTopicForm(instance = topic, data = request.POST)
+TypeError: __init__() got an unexpected keyword argument 'instance'
+2013-10-05 17:10:20,466 [Thread-3:-1239418048] [django.request:146] [WARNING]- Not Found: /topic
+2013-10-05 17:12:00,696 [Thread-1:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 42, in topic_edit
+    form = EditTopicForm(instance = topic, data = request.POST)
+  File "/home/cc/djcode/c28/topics/forms.py", line 21, in __init__
+    self.initial['name'] = self.instance.topic.name
+AttributeError: 'Topic' object has no attribute 'topic'
+2013-10-05 17:17:12,789 [Thread-1:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 321, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 31, in wrapper
+    result = func(*args)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/cc/djcode/c28/topics/views.py", line 42
+    form = EditTopicForm('name':topic.name, 'content':topic.content)
+                               ^
+SyntaxError: invalid syntax
+2013-10-05 17:17:24,692 [Thread-3:-1240466624] [django.request:212] [ERROR]- Internal Server Error: /topic/edit/id=8/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 42, in topic_edit
+    form = EditTopicForm({'name':topic.name, 'content':topic.content})
+  File "/home/cc/djcode/c28/topics/forms.py", line 20, in __init__
+    super(EditTopicForm, self).__init__(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 238, in __init__
+    raise ValueError('ModelForm has no model class specified.')
+ValueError: ModelForm has no model class specified.
+2013-10-05 17:28:57,942 [Thread-4:-1239418048] [django.request:212] [ERROR]- Internal Server Error: /topic/new/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/cc/djcode/c28/topics/views.py", line 26, in topic_new
+    form = NewTopicForm()
+  File "/usr/local/lib/python2.7/dist-packages/django/forms/models.py", line 238, in __init__
+    raise ValueError('ModelForm has no model class specified.')
+ValueError: ModelForm has no model class specified.
