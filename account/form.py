@@ -1,6 +1,7 @@
 #coding:utf-8
 from django import forms
 from account.models import *
+import datetime
 class SigninForm(forms.Form):
     error_message = {
         'duplicate_email':u'您输入的邮箱已被注册',
@@ -19,6 +20,7 @@ class SigninForm(forms.Form):
     {
         'required':u'请输入密码'
     })
+
     def clean(self):
         if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
             if self.cleaned_data['password'] != self.cleaned_data['password_confirm']:

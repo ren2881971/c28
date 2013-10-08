@@ -5,7 +5,7 @@ urlpatterns = patterns('account.views',
    url(r'^$','signup'),
    url(r'login/$',login),
    url(r'logout/$',logout),
-   url(r'^signin/$','signin'),
+   url(r'^regist/$','regist'),
 )
 
 
