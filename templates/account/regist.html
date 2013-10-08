@@ -5,7 +5,7 @@
 </head>
 <body>
         {{ form.non_field_errors }}
-    <form action = "/account/signin/" method = "post">
+    <form action = "/account/regist/" method = "post">
         {% csrf_token %}
             {{ form.email.errors }}
             登录邮箱：<input type = "email" id = "email" name = "email" value = "{{ email }}"/><br/>

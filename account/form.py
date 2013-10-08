@@ -6,6 +6,7 @@ class SigninForm(forms.Form):
     error_message = {
         'duplicate_email':u'您输入的邮箱已被注册',
         'password_error':u'密码输入不一致',
+        'duplicate_nickname':u'昵称已经被注册',
     }
     nickname = forms.CharField(max_length=50,label=u'昵称',error_messages={'required':u'请输入昵称'})
     email = forms.EmailField(max_length=128,label=u'登陆邮箱',widget=forms.TextInput,error_messages=
@@ -33,3 +34,10 @@ class SigninForm(forms.Form):
         except User.DoesNotExist:
             return email
         raise forms.ValidationError(self.error_message['duplicate_email'])
+    def clean_nickname(self):
+        nickname = self.cleaned_data['nickname']
+        try:
+            Account.objects.get(nickname = nickname)
+        except Account.DoesNotExist:
+            return nickname
+        raise forms.ValidationError(self.error_message['duplicate_nickname'])

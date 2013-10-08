@@ -14,7 +14,7 @@ def regist(request):
        form = SigninForm(request.POST)
        if form.is_valid():
            value = form.cleaned_data
-           user = User(email=value['email'],password = value['password'])
+           user = User(email=value['email'],username = value['email'],password = value['password'])
            user.save()
            account = Account(user=user,nickname = value['nickname'])
            account.save()
