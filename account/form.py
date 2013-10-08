@@ -12,7 +12,7 @@ class SigninForm(forms.Form):
     email = forms.EmailField(max_length=128,label=u'登陆邮箱',widget=forms.TextInput,error_messages=
     {'required':u'请输入注册邮箱','invalid':u'请输入有效的邮箱'}
     )
-    password = forms.CharField(widget=forms.PasswordInput(render_value=False),label=u'输入邮箱',error_messages=
+    password = forms.CharField(widget=forms.PasswordInput(render_value=False),label=u'输入密码',error_messages=
     {
         'required':u'请输入密码'
     }
@@ -41,3 +41,31 @@ class SigninForm(forms.Form):
         except Account.DoesNotExist:
             return nickname
         raise forms.ValidationError(self.error_message['duplicate_nickname'])
+class LoginForm(forms.Form):
+    error_message = {
+        'userNotExist':u'用户不存在',
+        'EmailOrPassWdWrong':u'用户名或密码错误',
+    }
+    email = forms.EmailField(max_length=128,label=u'登陆邮箱',widget=forms.TextInput,error_messages={
+        'required':u'请输入登录邮箱','invalid':u'请输入有效的邮箱'
+    })
+    password = forms.CharField(widget=forms.PasswordInput(render_value=False),label=u'输入密码',error_messages=
+    {
+        'required':u'请输入密码'
+    })
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        try:
+            User.objects.get(email = email)
+        except User.DoesNotExist:
+            raise forms.ValidationError(self.error_message['userNotExist'])
+        return email
+    def clean_password(self):
+        password = self.cleaned_data['password']
+        email = self.clean_email()
+        user = User.objects.get(email = email)
+        if user.password != password:
+            raise forms.ValidationError(self.error_message['EmailOrPassWdWrong'])
+        return password
+
+
