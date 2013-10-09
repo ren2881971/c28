@@ -21,6 +21,7 @@ urlpatterns += patterns('topics.views',
    url(r'topic/action/success/$', 'topic_action_success'),
    url(r'topic/delete/id=(?P<id>\d+)/$', 'topic_delete'),
    url(r'topic/edit/id=(?P<id>\d+)/$', 'topic_edit'),
+#   url(r'topic/reply/id=(?P<id>\d+)/$', 'topic_reply'),
 )
 
 ##TAG: admin MODE

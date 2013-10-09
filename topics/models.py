@@ -21,12 +21,15 @@ class Topic(models.Model):
     def __unicode__(self):
         return self.name  
 
-class Topic_reply(models.Model):
+class TopicReply(models.Model):
     topic = models.ForeignKey(Topic, related_name = 'topic_reply', help_text = '回复的帖子id')
  #qi   account = models.ForeignKey(Account, help_text = '发帖人id,如果未登录就为-1')
     #TAG： 未登录记为-1，这点貌似不可能
-    conten = models.TextField(help_text = '帖子内容')
+    content = models.TextField(help_text = '回复内容')
     create_time = models.DateTimeField(auto_now_add = True, help_text = '回复时间')
+
+    class Meta:
+        ordering = ['id']
 
     def __unicode__(self):
         return u'%s: %d'%(self.topic.name, self.id)

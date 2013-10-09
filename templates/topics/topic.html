@@ -5,5 +5,17 @@
     <h2>{{topic.content}}</h2>
     <a href="/topic/edit/id={{topic.id}}">编辑</a> 
     <a href="/topic/delete/id={{topic.id}}">删除</a>
+
+    {% for reply in replys %}
+	<li><h3>{{reply.content}}</h3></li> 
+	{% endfor %}
+
+	<form action="" method="post">
+    	{% csrf_token %}
+        <table>
+            {{ form.as_table }}
+        </table>
+    <input type="submit" value="回复">
+    </form>
 </ul>
 </html>
