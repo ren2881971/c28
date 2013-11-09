@@ -6,7 +6,7 @@ urlpatterns = patterns('account.views',
    url(r'logout/$',logout),
    url(r'^regist/$','regist'),
    url(r'^login/$','login'),
-   url(r'^loginForm/','loginForm'),
+   url(r'^loginSubmit/','loginSubmit'),
 )
 
 

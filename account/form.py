@@ -60,12 +60,14 @@ class LoginForm(forms.Form):
         except User.DoesNotExist:
             raise forms.ValidationError(self.error_message['userNotExist'])
         return email
-    def clean_password(self):
+    '''
+    def clean(self):
         password = self.cleaned_data['password']
-        email = self.clean_email()
+        email = self.cleaned_data['email']
         user = User.objects.get(email = email)
         if user.password != password:
             raise forms.ValidationError(self.error_message['EmailOrPassWdWrong'])
-        return password
+        return self.cleaned_data
+        '''
 
 

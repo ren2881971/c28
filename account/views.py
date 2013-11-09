@@ -18,25 +18,30 @@ def regist(request):
            user.save()
            account = Account(user=user,nickname = value['nickname'])
            account.save()
-           return render_to_response('account/welcome.html')
+           request.session['usr'] = account
+           return render_to_response('account/welcome.html',{'nickname':value['nickname']},context_instance=RequestContext(request))
    else:
        form = SigninForm()
    return render_to_response('account/regist.html',{'form':form},context_instance=RequestContext(request))
 
 def login(request):
     return render_to_response('account/login.html',context_instance = RequestContext(request))
-def loginForm(request):
+
+
+def loginSubmit(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
         if form.is_valid():
             value = form.cleaned_data
-            email = value['email']
-            password = value['password']
-            request.session['uid'] = email
-            return render_to_response('account/welcome.html')
-        else:
-            return render_to_response('<h1>验证失败</h1>')
-
-
-
+            user = User.objects.get(email = value['email'])
+            logger.info("============="+user.email+"==================")
+            if user.password == value['password']:
+                account = Account.objects.get(user=user)
+                logger.info("================已经验证成功")
+                request.session['usr'] = account
+                return render_to_response('account/welcome.html',{'nickname':account.nickname},context_instance=RequestContext(request))
+    else:
+        form = LoginForm()
+        logger.info("======验证失败=======")
+    return render_to_response('account/login.html',{'form':form},context_instance = RequestContext(request))
 
